@@ -20,17 +20,23 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+
 .dancer{
-  border:10px solid red;
+  border:30px solid red;
   border-radius:10px;
   position:absolute;
 }
 
-#fighter {
+.fighter {
     border:10px solid blue;
-
+    position:absolute;
 }
 
-#hiphopper {
-      border:80px solid orange;
+.hipHopper {
+      border:50px solid orange;
+      position:absolute;
+}
+.blinky {
+      border:50px solid yellow;
+/*      position:absolute;*/
 }
