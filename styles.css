@@ -25,3 +25,12 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+#fighter {
+    border:10px solid blue;
+
+}
+
+#hiphopper {
+      border:80px solid orange;
+}
