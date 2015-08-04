@@ -4,6 +4,7 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
+  background-image: url('http://milleniondesign.com/images/2010/12/Dragon-fly-night-club%20(2).jpg');
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -28,7 +29,7 @@ body, a:link, a:visited, a:active{
 }
 
 .fighter {
-    border:10px solid blue;
+    border:25px solid blue;
     position:absolute;
 }
 
