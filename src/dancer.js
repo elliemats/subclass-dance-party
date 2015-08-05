@@ -14,22 +14,14 @@ this.$node = $('<span class="dancer"></span>');
 
 
   makeDancer.prototype.step = function(){
-    // the basic dancer doesn't do anything interesting at all on each step,
-    // it just schedules the next step
     var that = this;
     setTimeout(function () {
       that.step();
     }, this.timeBetweenSteps);
-
-
-
   };
 
 
   makeDancer.prototype.setPosition = function(top, left){
-    // Use css top and left properties to position our <span> tag
-    // where it belongs on the page. See http://api.jquery.com/css/
-    //
     var styleSettings = {
       top: top,
       left: left
@@ -39,11 +31,31 @@ this.$node = $('<span class="dancer"></span>');
 
   };
 
-  makeDancer.prototype.lineUp = function(){
+
+  makeDancer.prototype.findClosest = function (){
+    for(var i = 0; i < window.dancers.length; i++){
+      for(var j = 0; j < window.dancers.length; j++){
+        var x1 = window.dancers[i].top;
+        var x2 = window.dancers[j].top;
+        var y1 = window.dancers[i].left;
+        var y2 = window.dancers[j].left;
+        var dist = Math.sqrt((Math.pow((x2-x1), 2))+(Math.pow((y2-y1), 2)));
+
+         if(dist > 0){
+           var style = {
+             top: '1000px',
+             left: '500px'
+           }
+           this.$node.css(style);
+         }
+       }
+     }
+  };
 
 
-    this.$node.css(styleSettings);
-  }
 
-  // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
-  // this one sets the position to some random default point within the body
+  // makeDancer.prototype.lineUp = function(){
+  //   this.$node.css(styleSettings);
+  // }
+
+

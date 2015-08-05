@@ -28,12 +28,21 @@ $(document).ready(function(){
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
 
 $(".lineUpButton").on('click', function(event) {
 
-  $(".dancer").css({'top': 'top', 'left': 200});
+  $(".dancer").css({'top': 'top', 'left': 100});
   });
+
+
+
+$("body").on("mouseover", ".dancer", function(){
+  $(".dancer").css({'border': '20px solid pink'
+});
+})
+
 
 });
 
