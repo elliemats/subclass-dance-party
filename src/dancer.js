@@ -32,25 +32,33 @@ this.$node = $('<span class="dancer"></span>');
   };
 
 
-  makeDancer.prototype.findClosest = function (){
-    for(var i = 0; i < window.dancers.length; i++){
-      for(var j = 0; j < window.dancers.length; j++){
-        var x1 = window.dancers[i].top;
-        var x2 = window.dancers[j].top;
-        var y1 = window.dancers[i].left;
-        var y2 = window.dancers[j].left;
-        var dist = Math.sqrt((Math.pow((x2-x1), 2))+(Math.pow((y2-y1), 2)));
+  // makeDancer.prototype.findClosest = function (){
+  //   for(var i = 1; i < window.dancers.length; i++){
+  //     for(var j = 1; j < window.dancers.length; j++){
+  //       var distance = [];
+  //       var x1 = window.dancers[i].top;
+  //       var x2 = window.dancers[j].top;
+  //       var y1 = window.dancers[i].left;
+  //       var y2 = window.dancers[j].left;
+  //       distance.push(Math.sqrt((Math.pow((x2-x1), 2))+(Math.pow((y2-y1), 2))));
 
-         if(dist > 0){
-           var style = {
-             top: '1000px',
-             left: '500px'
-           }
-           this.$node.css(style);
-         }
-       }
-     }
-  };
+
+  //       _.reduce(distance, function (memo , item) {
+  //         return memo > item;
+  //       });
+
+
+  //       if (dist)
+  //        if(this.top < dist && this.left < dist){
+  //          var style = {
+  //            top: top,
+  //            left: 500
+  //          }
+  //          this.$node.css(style);
+  //        }
+  //      }
+  //    }
+  // };
 
 
 

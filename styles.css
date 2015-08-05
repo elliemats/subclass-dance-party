@@ -43,7 +43,8 @@ a:hover {
 }
 
 .dancer{
-/*  border: 10px solid yellow;*/
+  width : 10px;
+  height: 10px;
   border-radius:10px;
   position:absolute;
 }
@@ -114,5 +115,7 @@ a:hover {
   }
 }
 .blinky {
+      width: 10px;
+      height: 10px;
       border: 20px solid yellow;
 }
